@@ -18,6 +18,7 @@ router.post('/create/:username', async (req, res) => {
             UserId: newUser.id
         })
     }
+    res.json('hi')
 })
 
 module.exports = router
