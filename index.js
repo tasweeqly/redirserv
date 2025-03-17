@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const db = require('./models')
 
+app.set('trust proxy', true);
+
 app.use(express.json())
 //Routes
 const userRouter = require('./routes/user')
