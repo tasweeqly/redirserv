@@ -15,7 +15,7 @@ app.use('/', redirRouter)
 
 db.sequelize.sync().then(() => {
 
-    app.listen(80, () => {
+    app.listen(3000, () => {
         console.log('server is running')
     })
 })
