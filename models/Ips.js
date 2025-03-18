@@ -1,7 +1,7 @@
 module.exports  = (sequelize, DataTypes) => {
 
     const Ips = sequelize.define('Ips', {
-        WhatsNum: {
+        Ip: {
             type: DataTypes.STRING,
             allowNull: false
         }
