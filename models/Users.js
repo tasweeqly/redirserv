@@ -10,6 +10,9 @@ module.exports  = (sequelize, DataTypes) => {
         Users.hasMany(models.WhatsNums, {
             onDelete: 'cascade'
         })
+        Users.hasMany(models.Ips, {
+            onDelete: 'cascade'
+        })
     }
     return Users
 
