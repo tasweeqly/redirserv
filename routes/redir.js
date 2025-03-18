@@ -39,7 +39,7 @@ router.get('/:username', async (req, res) => {
         whatsNum = whatsNum.WhatsNum
         console.log(`ip was not found, created new ip and assigned: ${whatsNum}`)
     }
-    //Ips.destroy({where: {UserId: username.id}})
+    Ips.destroy({where: {UserId: username.id}})
     return res.redirect(whatsNum)
 })
 
