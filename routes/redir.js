@@ -23,7 +23,7 @@ router.get('/:username', validateUser, async (req, res) => {
     }
     else {
         //search the database for all the available whatsapp numbers
-        availableWhatsNums = await WhatsNums.findAll({ attributes: ['id'], raw: true })
+        availableWhatsNums = await WhatsNums.findAll({where:{UserId : username.id}, attributes: ['id'], raw: true })
         //change the returned object to an array of ids
         const idList = availableWhatsNums.map(item => item.id);
         //assign new whatsapp number randomly
